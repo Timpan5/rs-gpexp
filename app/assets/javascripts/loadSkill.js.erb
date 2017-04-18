@@ -2,12 +2,14 @@ $(function(){
     var $table = $("#options");
     for (var key in options) {
         var $row = $("<tr>");
-        $row.append($("<td>").html(key));
+        $row.append($("<td class='method'>").html(key));
         $row.append($("<td class='exp'>").html(options[key]));
         $row.append($("<td><input class='count' type='number' value=0></td>"));
         $row.append($("<td class='total'>").html(0));
         $row.appendTo($table);
     }
+
+    updateSummary();
 
     $(".count").change(function(){
         var $row = $(this).closest("tr");
@@ -24,4 +26,19 @@ function updateSummary() {
         sum += parseFloat($(this).html());
     });
     $("#totalExp").html('Total Experience Gained: ' + sum);
+}
+
+function savePlan(){
+    var $table = $("#options");
+    var $rows = $table.find("> tbody > tr");
+
+    var entries = {};
+    $rows.each(function(){
+        if($(this).find(".count").val() > 0) {
+            entries[$(this).find(".method").html()] = $(this).find(".count").val();
+        }
+    });
+
+    alert(JSON.stringify(entries));
+    alert($("#saveName").val());
 }
