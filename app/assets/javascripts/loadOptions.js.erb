@@ -1,3 +1,17 @@
 $(function(){
-    alert(JSON.stringify(options));
+    var $table = $("#options");
+    for (var key in options) {
+        var $row = $("<tr>");
+        $row.append($("<td>").html(key));
+        $row.append($("<td class='exp'>").html(options[key]));
+        $row.append($("<td><input class='count'></td>"));
+        $row.append($("<td class='total'>").html(0));
+        $row.appendTo($table);
+    }
+
+    $(".count").change(function(){
+        var $row = $(this).closest("tr");
+        $row.children(".total").html($(this).val() * $row.children(".exp").html());
+    });
 });
+
