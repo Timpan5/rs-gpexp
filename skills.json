@@ -1,0 +1,14 @@
+{
+  "skills" : {
+               "firemaking" : {
+                                "Logs" : 40,
+                                "Oak logs" : 60,
+                                "Willow logs" : 90,
+                                "Maple logs" : 135,
+                                "Yew logs" : 202.5,
+                                "Magic logs" : 303.8,
+                                "Redwood logs" : 500
+                              }
+
+             }
+}
