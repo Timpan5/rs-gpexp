@@ -4,14 +4,24 @@ $(function(){
         var $row = $("<tr>");
         $row.append($("<td>").html(key));
         $row.append($("<td class='exp'>").html(options[key]));
-        $row.append($("<td><input class='count'></td>"));
+        $row.append($("<td><input class='count' type='number' value=0></td>"));
         $row.append($("<td class='total'>").html(0));
         $row.appendTo($table);
     }
 
     $(".count").change(function(){
         var $row = $(this).closest("tr");
-        $row.children(".total").html($(this).val() * $row.children(".exp").html());
+        var total = $(this).val() * $row.children(".exp").html();
+        $row.children(".total").html(Math.round(total * 100) / 100);
+
+        updateSummary();
     });
 });
 
+function updateSummary() {
+    var sum = 0;
+    $(".total").each(function() {
+        sum += parseFloat($(this).html());
+    });
+    $("#totalExp").html('Total Experience Gained: ' + sum);
+}
