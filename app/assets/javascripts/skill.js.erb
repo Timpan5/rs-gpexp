@@ -39,6 +39,16 @@ function savePlan(){
         }
     });
 
-    alert(JSON.stringify(entries));
-    alert($("#saveName").val());
+    var data = {"plan_name" : $("#saveName").val(), "skill" : skillName, "plan" : entries};
+
+    $.ajax({
+        method: 'POST',
+        url: "storage",
+        data: data
+    }).done(function(){
+        alert("Done");
+    }).fail(function(){
+       alert("Fail");
+    });
+
 }
