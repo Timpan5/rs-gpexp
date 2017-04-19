@@ -1,5 +1,8 @@
 class StorageController < ApplicationController
   def load
+    @skill_plans = (SkillPlan.where(plan_name: params[:plan_name]))
+    puts @skill_plans.to_json
+    render :json => @skill_plans.to_json
   end
 
   def store

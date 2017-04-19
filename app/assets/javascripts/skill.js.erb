@@ -42,8 +42,8 @@ function savePlan(){
     var data = {"plan_name" : $("#saveName").val(), "skill" : skillName, "plan" : entries};
 
     $.ajax({
-        method: 'POST',
         url: "storage",
+        method: 'POST',
         data: data
     }).done(function(){
         alert("Done");
