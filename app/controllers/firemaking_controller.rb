@@ -7,6 +7,8 @@ class FiremakingController < ApplicationController
     data = JSON.parse(file)
     firemaking = data["skills"]["firemaking"]
     @options = firemaking.to_json
-    @skillName = 'firemaking';
+    @skillName = 'firemaking'
+    @skillTitle = 'Firemaking'
+    render "layouts/load"
   end
 end
