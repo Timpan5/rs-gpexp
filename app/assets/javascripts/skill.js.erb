@@ -1,4 +1,4 @@
-$(function(){
+function createSkillPage(){
     var plan = {};
     if (existing) {
         $("#saveName").val(existing["plan_name"]);
@@ -24,7 +24,7 @@ $(function(){
 
         updateSummary();
     });
-});
+}
 
 function updateSummary() {
     var sum = 0;

@@ -7,4 +7,5 @@
   var options = <%= raw @options %>;
   var skillName = '<%= raw @skillName %>';
   var existing = <%= defined?(@existing) ? (raw @existing) : 'false' %>;
+  createSkillPage();
 </script>

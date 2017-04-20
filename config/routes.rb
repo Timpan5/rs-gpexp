@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   get 'storage', to: 'storage#load'
   post 'storage', to: 'storage#store'
 
-  get 'skills/:name', to: 'skill#load'
+  get 'skills/:name', to: 'skill#load', as: 'skills'
 end

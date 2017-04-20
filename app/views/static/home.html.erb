@@ -3,3 +3,13 @@
 <h2>Load Existing Plan</h2>
 <input id="loadName"><button onclick="loadPlan()">Load</button>
 <section id="existing"></section>
+
+<h2>Start New Plan</h2>
+<%= button_to "Construction", skills_path(:name => "construction"), method: :get %>
+<%= button_to "Cooking", skills_path(:name => "cooking"), method: :get %>
+<%= button_to "Crafting", skills_path(:name => "crafting"), method: :get %>
+<%= button_to "Firemaking", skills_path(:name => "firemaking"), method: :get %>
+<%= button_to "Hunter", skills_path(:name => "hunter"), method: :get %>
+<%= button_to "Prayer", skills_path(:name => "prayer"), method: :get %>
+<%= button_to "Runecrafting", skills_path(:name => "runecrafting"), method: :get %>
+<%= button_to "Smithing", skills_path(:name => "smithing"), method: :get %>

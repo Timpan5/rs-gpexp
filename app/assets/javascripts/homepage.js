@@ -1,6 +1,6 @@
 function loadPlan() {
     $.ajax({
-        url: "/storage",
+        url: "storage",
         method: "GET",
         data: {"plan_name" : $("#loadName").val()}
     }).done(function(jsondata){
