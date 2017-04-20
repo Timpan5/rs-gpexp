@@ -9,7 +9,12 @@ class StorageController < ApplicationController
   end
 
   def store
-    @skill_plans = SkillPlan.new(:plan_name => params[:plan_name], :skill => params[:skill], :plan => params[:plan])
-    @skill_plans.save
+    @skill_plans = SkillPlan.where(plan_name: params[:plan_name], skill: params[:skill])
+    if (@skill_plans.exists?)
+      @skill_plans.update(plan: params[:plan])
+    else
+      @skill_plans = SkillPlan.new(:plan_name => params[:plan_name], :skill => params[:skill], :plan => params[:plan])
+      @skill_plans.save
+    end
   end
 end
