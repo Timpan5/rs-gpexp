@@ -9,6 +9,11 @@ $(function(){
         $row.appendTo($table);
     }
 
+    if (existing) {
+        alert("@");
+        alert(JSON.stringify(existing));
+    }
+
     updateSummary();
 
     $(".count").change(function(){

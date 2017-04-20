@@ -18,6 +18,6 @@ function loadPlan() {
 
 function loadSkill(name, skill) {
     return function() {
-      alert(name + skill);
+        document.location.href = '/' + skill + '?' + $.param({"plan_name" : name, "skill" : skill});
     };
 }
