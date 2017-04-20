@@ -1,14 +1,50 @@
 {
   "skills" : {
-               "firemaking" : {
-                                "Logs" : 40,
-                                "Oak logs" : 60,
-                                "Willow logs" : 90,
-                                "Maple logs" : 135,
-                                "Yew logs" : 202.5,
-                                "Magic logs" : 303.8,
-                                "Redwood logs" : 500
-                              }
-
-             }
+    "firemaking": {
+      "Logs": 40,
+      "Oak logs": 60,
+      "Willow logs": 90,
+      "Maple logs": 135,
+      "Yew logs": 202.5,
+      "Magic logs": 303.8,
+      "Redwood logs": 500
+    },
+    "prayer": {
+      "Big bones": 52.5,
+      "Dragon bones": 252,
+      "Dagannoth bones": 437.5
+    },
+    "construction": {
+      "Oak larder": 480,
+      "Oak door": 600,
+      "Mahogany table": 840
+    },
+    "runecrafting": {
+      "Air rune": 5,
+      "Fire rune": 7,
+      "Astral rune": 8.7,
+      "Nature rune": 9,
+      "Law rune": 9.5,
+      "Lava rune": 10.5
+    },
+    "crafting": {
+      "Green d'hide body": 186,
+      "Black d'hide body": 258
+    },
+    "hunter": {
+      "Red chinchompa": 265,
+      "Black chinchompa": 315
+    },
+    "smithing": {
+      "Gold bar": 56.2,
+      "Iron platebody": 125,
+      "Rune platelegs": 225,
+      "Adamant platebody": 312.5
+    },
+    "cooking": {
+      "Monkfish": 150,
+      "Wine": 200,
+      "Shark": 210
+    }
+  }
 }
