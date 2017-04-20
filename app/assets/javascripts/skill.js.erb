@@ -48,7 +48,7 @@ function savePlan(){
     var data = {"plan_name" : $("#saveName").val(), "skill" : skillName, "plan" : entries};
 
     $.ajax({
-        url: "storage",
+        url: "/storage",
         method: 'POST',
         data: data
     }).done(function(){
@@ -56,5 +56,4 @@ function savePlan(){
     }).fail(function(){
        alert("Fail");
     });
-
 }

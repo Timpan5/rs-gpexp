@@ -1,6 +1,6 @@
 function loadPlan() {
     $.ajax({
-        url: "storage",
+        url: "/storage",
         method: "GET",
         data: {"plan_name" : $("#loadName").val()}
     }).done(function(jsondata){
@@ -18,6 +18,6 @@ function loadPlan() {
 
 function loadSkill(name, skill) {
     return function() {
-        document.location.href = '/' + skill + '?' + $.param({"plan_name" : name, "skill" : skill});
+        document.location.href = '/skills/' + skill + '?' + $.param({"plan_name" : name, "skill" : skill});
     };
 }
